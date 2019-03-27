@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>User data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        form{
+            border: 2px red solid;
+            border-radius: 30px;
+            padding:30px;
+            background-color: burlywood;
+        }
+        h2{
+            margin-top: 10px;
+            background-color: darkorange;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input[name]{
+            width:250px;
+
+        }
+        input[value]{
+            height: 40px;
+            width: 100px;
+        }
+        table{
+            margin-top: -160px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+        label{
+            font-size: 20px;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+   <center><form method="POST">
+    <h2>Enter Movie Details</h2>
+    {% csrf_token %}
+ <table>
+        <tr>
+            <th><label>Enter Movie Name:</label></th>
+            <td><input type="text" name="mname"></td>
+        </tr>
+          <tr>
+            <th><label>Enter Director Name:</label></th>
+            <td><input type="text" name="dname"></td><br>
+        </tr>
+          <tr>
+            <th><label>Enter Hero Name:</label></th>
+            <td><input type="text" name="hname"></td><br></br>
+        </tr>
+          <tr>
+            <th><label>Enter Heroine Name:</label></th>
+            <td><input type="text" name="hename"></td><br></br>
+        </tr>
+          <tr>
+            <th><label>Enter Producer Name:</label></th>
+            <td><input type="text" name="pname"></td><br></br>
+        </tr>
+          <tr>
+            <th><label>Enter Release Date:</label></th>
+            <td><input type="date" name="rname"></td><br></br>
+        </tr>
+    <tr>
+        <th></th>
+
+    <td>
+    <input type="submit" value="BookTicket" class=" btn btn-success">
+     </td>
+       </tr>
+     </table>
+</form>
+</center>
+
+</body>
+
+</html>

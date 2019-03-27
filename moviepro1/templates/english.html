@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Hindi movies</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    table{
+        margin-top: 20px;
+        background-color: aqua;
+    }
+    body{
+        background-color: chartreuse;
+    }
+    h2{
+        text-align: center;
+        color: darkorange;
+        font-family: cursive;
+    }
+    th,td{
+        padding: 10px 20px;
+    }
+    a{
+        margin-top: 10px;
+    }
+</style>
+<body>
+<h2><b>English Movies</h2></b>
+<center><table border="2px">
+    {% if edata %}
+    <thead>
+    <tr>
+    <th>Movie Name</th>
+    <th>Director Name</th>
+    <th>Hero Name</th>
+    <th>Heroine Name</th>
+    <th>Producer Name</th>
+    <th>Released Date</th>
+    </tr>
+    </thead>
+     {% for i in edata %}
+    <tbody>
+    <tr>
+    <td>{{ i.movie_name }}</td>
+    <td>{{ i.director_name }}</td>
+    <td>{{ i.hero_name }}</td>
+    <td>{{ i.heroine_name }}</td>
+    <td>{{ i.producer_name }}</td>
+    <td>{{ i.release_date }}</td>
+    </tr>
+
+    </tbody>
+    {% endfor %}
+    {% else %}
+    {% endif %}
+</table>
+
+<a type="button" class="btn btn-success" href="/book/">Book Ticket</a>
+</center>
+</body>
+</html>
